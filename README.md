@@ -47,7 +47,7 @@ Agregar reseñas/
 
 Si no se desea usar entorno PHP o base de datos, puedes probar la demo sin backend:
 
-👉 Abrir el archivo: `/demo/demo_resena.html`  
+👉 Abrir el archivo: `/demo_resena.html`  
 ✅ Simula el comportamiento de selección de estrellas, categorías y envío con alertas.
 
 ---
@@ -82,7 +82,7 @@ Verifica si el usuario tiene sesión iniciada, en caso contrario lo redirige a `
 ## 🚀 Cómo ejecutarlo
 
 ### Opción 1: Solo frontend (demo)
-1. Abre `/demo/demo_resena.html` en tu navegador.
+1. Abre `/demo_resena.html` en tu navegador.
 2. Interactúa con el formulario y observa los `console.log`.
 
 ### Opción 2: Con backend (PHP + MySQL)
@@ -97,7 +97,7 @@ Verifica si el usuario tiene sesión iniciada, en caso contrario lo redirige a `
 ## 📩 Autor
 
 **Ian Seijas**  
-Desarrollador en formación, centrado en proyectos prácticos con HTML, CSS, JavaScript y PHP.
+Desarrollador, centrado en proyectos prácticos con HTML, CSS, JavaScript y PHP.
 
 ---
 
