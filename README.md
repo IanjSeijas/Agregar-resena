@@ -5,7 +5,9 @@ Formulario web funcional para crear reseñas de videojuegos. Este proyecto permi
 ## 📁 Estructura del proyecto
 
 Agregar reseñas/
+
 │
+
 ├── css/
 │ └── style3.css # Estilos del formulario de reseñas
 │
