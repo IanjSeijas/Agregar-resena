@@ -10,14 +10,14 @@ Agregar reseñas/
 
 ├── css/
 
-  └── style3.css # Estilos del formulario de reseñas
+    └── style3.css # Estilos del formulario de reseñas
 
 │
 
 ├
 ── scripts/
 
-  └── script1.js # JavaScript para interacción (estrellas, select, alert)
+    └── script1.js # JavaScript para interacción (estrellas, select, alert)
 
 │
 
