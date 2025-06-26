@@ -26,11 +26,7 @@ Agregar reseñas/
 │
 
 ├
-── demo/
-
-│
-
-└── demo_resena.html # Demo funcional en frontend sin PHP
+── demo_resena.html # Demo funcional en frontend sin PHP
 
 │
 
