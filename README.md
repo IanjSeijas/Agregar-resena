@@ -11,25 +11,37 @@ Agregar reseñas/
 ├── css/
 
 │
+
 └── style3.css # Estilos del formulario de reseñas
+
 │
 
 ├
 ── scripts/
+
 │
+
 └── script1.js # JavaScript para interacción (estrellas, select, alert)
+
 │
 
 ├
 ── demo/
+
 │
+
 └── demo_resena.html # Demo funcional en frontend sin PHP
+
 │
 
 ├── index.php # Formulario HTML+PHP (requiere sesión iniciada)
+
 ├── verificar_sesion.php # Redirige si el usuario no ha iniciado sesión
+
 ├── conexion.php # Inserta datos en base de datos si el usuario está autenticado
+
 ├── iniciar_sesion.html # Página a la que se redirige si no hay sesión (no incluida en el repositorio)
+
 ├── README.md
 └── …
 
