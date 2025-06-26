@@ -62,7 +62,7 @@ Agregar reseñas/
 
 Si no se desea usar entorno PHP o base de datos, puedes probar la demo sin backend:
 
-👉 Abrir el archivo: `/demo_resena.html`  
+👉 🔗 [Ver demo en GitHub Pages](https://ianjseijas.github.io/Agregar-resena/demo_resena.html)  
 ✅ Simula el comportamiento de selección de estrellas, categorías y envío con alertas.
 
 ---
