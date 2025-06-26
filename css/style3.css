@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+section {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex: 1;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 60px;
+}
+
+/*Comienza Introducir reseña*/
+
+.resena {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1100px;
+    height: 370px;
+
+}
+.resena h2 {
+    padding: 60px 0 0 0;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+.resena form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .opinion {
+    position: relative;
+    border-bottom: 2px solid white;
+    margin: 25px 0 20px;
+}
+.opinion input {
+    width: 100%;
+    padding: 0 5px;
+    height: 15px;
+    font-size: 14px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.opinion label {
+    position: absolute;
+    top: 55%;
+    left: 800px;
+    color: white;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+.star-seleccion {
+    display: flex;
+    justify-content: space-between;
+}
+.rating {
+    display: flex;
+    justify-content: left;
+    font-size: 24px;
+    color: goldenrod;
+}
+.rating .star {
+    cursor: pointer;
+}
+.rating .star:hover {
+    transform: scale(1.1);
+}
+.contenedor-texto {
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+}
+textarea {
+    width: 100%;
+    height: 130px;
+    padding: 10px;
+    border: 2px solid rebeccapurple;
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+}
+.btn-entrada button {
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btn-entrada .btn-enviar {
+    background: rebeccapurple;
+    color: white;
+}

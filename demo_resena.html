@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Reseña para videojuego (Demo)">
+    <meta name="author" content="Ian Seijas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Next: Biblioteca de Videojuegos (Demo)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #1d1d1d;
+        }
+
+        section {
+            flex: 1;
+            min-height: 60px;
+        }
+
+        .resena {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 1100px;
+            height: 370px;
+        }
+
+        .resena h2 {
+            padding: 60px 0 0 0;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .resena form {
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        form .opinion {
+            position: relative;
+            border-bottom: 2px solid white;
+            margin: 25px 0 20px;
+        }
+
+        .opinion input {
+            width: 100%;
+            padding: 0 5px;
+            height: 15px;
+            font-size: 14px;
+            border: none;
+            background: none;
+            outline: none;
+            color: white;
+        }
+
+        .opinion label {
+            position: absolute;
+            top: 55%;
+            left: 800px;
+            color: white;
+            transform: translateY(-50%);
+            font-size: 16px;
+            pointer-events: none;
+        }
+
+        .star-seleccion {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: left;
+            font-size: 24px;
+            color: goldenrod;
+        }
+
+        .rating .star {
+            cursor: pointer;
+        }
+
+        .rating .star:hover {
+            transform: scale(1.1);
+        }
+
+        .contenedor-texto {
+            display: flex;
+            justify-content: space-between;
+            width: 1100px;
+            gap: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 130px;
+            padding: 10px;
+            border: 2px solid rebeccapurple;
+            border-radius: 4px;
+            resize: none;
+            outline: none;
+        }
+
+        .btn-entrada button {
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .btn-entrada .btn-enviar {
+            background: rebeccapurple;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="resena">
+            <h2>Dinos tu opinión. Crea tu reseña</h2>
+            <form id="formresena">
+                <div class="opinion">
+                    <label for="nombre_game">Nombre del Videojuego</label>
+                    <input type="text" id="nombre_game" name="nombre_game" required />
+                </div>
+
+                <div class="star-seleccion">
+                    <div class="rating">
+                        <input type="number" name="rating" id="ratingValue" required hidden>
+                        <i class="bi bi-star star"></i>
+                        <i class="bi bi-star star"></i>
+                        <i class="bi bi-star star"></i>
+                        <i class="bi bi-star star"></i>
+                        <i class="bi bi-star star"></i>
+                    </div>
+                    <div class="seleccion">
+                        <select name="categoria" id="categoria" required>
+                            <option value="" disabled selected>Seleccione una categoría</option>
+                            <option value="1">Acción</option>
+                            <option value="2">Aventura</option>
+                            <option value="3">Lucha</option>
+                            <option value="4">Deportivo</option>
+                            <option value="5">Estrategia</option>
+                            <option value="6">Simulación</option>
+                            <option value="7">Supervivencia</option>
+                            <option value="8">Juegos musicales</option>
+                            <option value="9">RPG</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="contenedor-texto">
+                    <textarea name="virtudes" placeholder="Escribe sus virtudes..." required></textarea>
+                    <textarea name="carencias" placeholder="Escribe sus carencias..." required></textarea>
+                </div>
+
+                <div class="btn-entrada">
+                    <button type="submit" name="enviar" class="btn-enviar">Enviar</button>
+                    <button type="reset" class="btn-cancelar">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const stars = document.querySelectorAll(".rating .star");
+            const ratingValue = document.getElementById("ratingValue");
+
+            stars.forEach((item, idx) => {
+                item.addEventListener("click", function () {
+                    ratingValue.value = idx + 1;
+                    console.log("Estrellas seleccionadas:", ratingValue.value);
+
+                    stars.forEach(i => {
+                        i.classList.replace("bi-star-fill", "bi-star");
+                    });
+                    for (let i = 0; i <= idx; i++) {
+                        stars[i].classList.replace("bi-star", "bi-star-fill");
+                    }
+                });
+            });
+
+            const categoria = document.getElementById('categoria');
+            categoria.addEventListener('change', function () {
+                console.log("Categoría seleccionada:", categoria.value);
+            });
+
+            const form = document.getElementById('formresena');
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Gracias por tu opinión (demo)');
+            });
+        });
+    </script>
+</body>
+</html>
